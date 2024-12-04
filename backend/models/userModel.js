@@ -3,7 +3,7 @@ const createConnection = require("../db.js"); // Importa a função para criar a
 const { Request, TYPES } = require("tedious"); // Importa as classes necessárias do tedious
 
 // Função para buscar todos os usuários no banco de dados
-exports.getAllUsers = (callback) => {
+exports.getMensagemAleatoria = (callback) => {
   const connection = createConnection(); // Cria a conexão com o banco de dados
 
   // Evento de conexão com o banco de dados
@@ -12,7 +12,7 @@ exports.getAllUsers = (callback) => {
       return callback(err, null); // Trata erros de conexão
     }
 
-    const query = `SELECT * FROM users1`; // Consulta SQL para buscar todos os usuários
+    const query = ``; // Consulta SQL para buscar todos os usuários
     const request = new Request(query, (err, rowCount) => {
       if (err) {
         return callback(err, null); // Trata erros de execução da consulta
