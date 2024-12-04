@@ -1,7 +1,11 @@
-let peruClicado = 0
-let emojiPeru = document.getElementById("peru")
+let emojiPeru = document.getElementById("peru");
 
 function cliquePeru() {
-  peruClicado += 1
-  if (peruClicado >= 10) emojiPeru.textContent = "🍗"
+  emojiPeru.style.transition = "all 0.5s ease";
+  emojiPeru.style.transform = "scale(1.2)"
+
+  setTimeout(() => {
+    emojiPeru.textContent = "🍗";
+    emojiPeru.style.transform = "scale(1)"
+  }, 500);
 }

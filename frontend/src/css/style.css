@@ -85,7 +85,7 @@ a:hover {
 
 .parallax {
     position: relative;
-    background-image: url(''); 
+    background-image: url('../img/'); 
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
