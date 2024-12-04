@@ -2,11 +2,11 @@ const userModel = require("../models/userModel"); // Importa o model para intera
 
 // Função para lidar com a requisição de listagem de usuários
 exports.getMensagemAleatoria = (req, res) => {
-  userModel.getMensagemAleatoria((err, users) => {
+  userModel.getMensagemAleatoria((err, mensagem) => {
     if (err) {
       res.status(500).send("Erro ao buscar mensagem"); // Retorna um erro 500 se algo deu errado
     } else {
-      res.json(mensagensAleatorias); // Retorna os usuários em formato JSON
+      res.json(mensagem); // Retorna os usuários em formato JSON
     }
   });
 };
@@ -27,11 +27,11 @@ exports.getHistoria = (req, res) => {
 
 // Função para lidar com a requisição de listagem de usuários
 exports.getHistoriaAleatoria = (req, res) => {
-  userModel.getHistoriaAleatoria((err, users) => {
+  userModel.getHistoriaAleatoria((err, historiaAleatoria) => {
     if (err) {
       res.status(500).send("Erro ao buscar história"); // Retorna um erro 500 se algo deu errado
     } else {
-      res.json(historiasAleatorias); // Retorna os usuários em formato JSON
+      res.json(historiaAleatoria); // Retorna os usuários em formato JSON
     }
   });
 };
