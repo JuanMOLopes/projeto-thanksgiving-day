@@ -2,46 +2,49 @@ const userModel = require("../models/userModel"); // Importa o model para intera
 
 // Função para lidar com a requisição de listagem de usuários
 exports.getMensagemAleatoria = (req, res) => {
-  userModel.getMensagemAleatoria((err, users) => {
+  userModel.getMensagemAleatoria((err, mensagem) => {
     if (err) {
       res.status(500).send("Erro ao buscar mensagem"); // Retorna um erro 500 se algo deu errado
     } else {
-      res.json(users); // Retorna os usuários em formato JSON
+      res.json(mensagem); // Retorna os usuários em formato JSON
     }
   });
 };
 
 // Função para lidar com a requisição de listagem de usuários
 exports.getHistoria = (req, res) => {
-  userModel.getHistoria((err, users) => {
+  const { palavra } = req.params;
+
+  userModel.getHistoria(palavra, (err, historias) => {
     if (err) {
       res.status(500).send("Erro ao buscar história"); // Retorna um erro 500 se algo deu errado
     } else {
-      res.json(users); // Retorna os usuários em formato JSON
+      res.json(historias); // Retorna as histórias em formato JSON
     }
   });
 };
 
+
 // Função para lidar com a requisição de listagem de usuários
 exports.getHistoriaAleatoria = (req, res) => {
-  userModel.getHistoriaAleatoria((err, users) => {
+  userModel.getHistoriaAleatoria((err, historiaAleatoria) => {
     if (err) {
       res.status(500).send("Erro ao buscar história"); // Retorna um erro 500 se algo deu errado
     } else {
-      res.json(users); // Retorna os usuários em formato JSON
+      res.json(historiaAleatoria); // Retorna os usuários em formato JSON
     }
   });
 };
 
 // Função para criar um novo usuário
 exports.postMensagem = (req, res) => {
-  const { Mensagem, Tema } = req.body; // Obtém os dados do corpo da requisição
+  const dados = req.body;
 
-  userModel.postMensagem({ Mensagem, Tema }, (err) => {
+  userModel.postMensagem(dados, (err) => {
     if (err) {
-      res.status(500).send("Erro ao enviar mensagem"); // Retorna um erro 500 se algo deu errado
+      res.status(500).send("Erro ao enviar mensagem"); 
     } else {
-      res.status(201).send("Mensagem enviada com sucesso"); // Retorna mensagem de sucesso
+      res.status(201).send("Mensagem enviada com sucesso"); 
     }
   });
 };

@@ -12,7 +12,7 @@ const config = {
     },
   },
   options: {
-    database: "BCD_testeDeApi", // Nome do banco de dados
+    database: "gratidaoProjetoGrupoDois", // Nome do banco de dados
     encrypt: false, // Desativar criptografia (pode mudar se necessário)
     port: 1433, // Porta padrão do SQL Server
     trustServerCertificate: true, // Necessário para evitar erro de SSL em ambiente local

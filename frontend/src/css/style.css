@@ -21,11 +21,11 @@ body {
 }
 
 .row-reverse {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
 
 .column {
   display: flex;
@@ -80,34 +80,34 @@ a:hover {
 
 
 .gallery {
-    width: 90%;
-    gap: 15px; 
-    margin-top: 3rem;
+  width: 90%;
+  gap: 15px;
+  margin-top: 3rem;
 }
 
 .gallery img {
-    width: 440px; 
-    height: 300px;
-    object-fit: cover; 
-    border-radius: 15px; 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
-    transition: transform 0.7s ease, box-shadow 0.3s ease;
+  width: 440px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.7s ease, box-shadow 0.3s ease;
 }
 
 .gallery img:hover {
-    transform: scale(1.15); 
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); 
+  transform: scale(1.15);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .parallax {
-    position: relative;
-    background-image: url('../img/parallax.jpg'); 
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    height: 60vh;
-    width: 100%;
-    z-index: -1; 
+  position: relative;
+  background-image: url("../img/parallax.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  width: 100%;
+  z-index: -1;
 }
 
 .down{
@@ -164,22 +164,22 @@ a:hover {
 }
 
 .container2 p {
-    font-family: "Lora", serif;
-    color: #333333;
-    font-size: 1.3rem;
-    text-align: center;
-    margin: 10px;
-    width: 60vw;
-  }
+  font-family: "Lora", serif;
+  color: #333333;
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 10px;
+  width: 60vw;
+}
 
-  .container2 img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10%;
-    border: 9px solid #4b1f0a; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  }
+.container2 img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10%;
+  border: 9px solid #4b1f0a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
 
 .form-mensagem input {
   width: 100%;
@@ -205,10 +205,10 @@ button {
 }
 
 button:hover {
-    background-color: #f9f9f9; 
-    color: #4b1f0a;
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px #ff6f61; 
+  background-color: #f9f9f9;
+  color: #4b1f0a;
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px #ff6f61;
 }
 
 footer {
