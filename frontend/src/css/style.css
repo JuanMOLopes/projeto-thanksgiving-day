@@ -109,16 +109,7 @@ a:hover {
   width: 100%;
   /* z-index: -1; */
 }
-.parallaxx{
-  position: relative;
-  background-image: url("../img/parallax.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  height: 60vh;
-  width: 100%;
-  /* z-index: -1; */
-}
+
 
 .down{
   border: 8px solid #8a5a2b; 
