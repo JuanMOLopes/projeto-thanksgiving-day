@@ -7,8 +7,8 @@ const config = {
   authentication: {
     type: "default", // Tipo de autenticação (no caso, autenticando com nome de usuário e senha)
     options: {
-      userName: "testesql", // Nome do usuário do banco de dados
-      password: "12345", // Senha do banco de dados
+      userName: "AguiarLogon", // Nome do usuário do banco de dados
+      password: "1234", // Senha do banco de dados
     },
   },
   options: {
