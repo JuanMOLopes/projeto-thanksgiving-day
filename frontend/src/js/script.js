@@ -177,6 +177,6 @@ async function enviarMensagem() {
     temaInput.value = "";
   } else {
     const error = await response.json();
-    alert(`Erro ao adicionar usuário: ${error.message}`);
+    alert(`Erro ao adicionar mensagem: ${error.message}`);
   }
 }
