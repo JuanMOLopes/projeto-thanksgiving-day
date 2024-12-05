@@ -99,7 +99,7 @@ a:hover {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-.parallax {
+.parallax{
   position: relative;
   background-image: url("../img/parallax.jpg");
   background-attachment: fixed;
@@ -107,7 +107,17 @@ a:hover {
   background-position: center;
   height: 60vh;
   width: 100%;
-  z-index: -1;
+  /* z-index: -1; */
+}
+.parallaxx{
+  position: relative;
+  background-image: url("../img/parallax.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  width: 100%;
+  /* z-index: -1; */
 }
 
 .down{
