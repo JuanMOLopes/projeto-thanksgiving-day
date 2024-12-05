@@ -17,6 +17,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  gap: 3rem;
+  margin-top: 3rem;
   align-items: center;
 }
 
