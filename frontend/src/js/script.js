@@ -106,6 +106,51 @@ async function mensagemAleatoria() {
   });
 }
 
+async function historiaAleatoria() {
+  const sessaoHistoria = document.getElementById("sessaoHistoria");
+
+  sessaoHistoria.innerHTML = "";
+
+  const response = await fetch(`${apiUrl}/historiaAleatoria`);
+  const historias = await response.json();
+
+  historias.forEach((historiaAleatoria) => {
+    const historiaItem = document.createElement("div");
+    historiaItem.className = "container2 column";
+    historiaItem.innerHTML = `
+      <h2>${historiaAleatoria.Titulo}</h2>
+      <br>
+      <p>${historiaAleatoria.Historia}</p>
+      <br>
+      <img src="../../${historiaAleatoria.ImagemURL}" alt="">`;
+    sessaoHistoria.appendChild(historiaItem);
+  });
+}
+
+async function historiaPorPalavra() {
+  const sessaoHistoria = document.getElementById("sessaoHistoria");
+  const palavraChaveInput = document.getElementById("palavraChaveInput");
+
+  const palavraChave = palavraChaveInput.value.trim();
+
+  sessaoHistoria.innerHTML = "";
+
+  const response = await fetch(`${apiUrl}/historia/palavra/${palavraChave}`);
+  const historinhas = await response.json();
+
+  historinhas.forEach((historias) => {
+    const historiaItem = document.createElement("div");
+    historiaItem.className = "container2 column";
+    historiaItem.innerHTML = `
+      <h2>${historias.Titulo}</h2>
+      <br>
+      <p>${historias.Historia}</p>
+      <br>
+      <img src="../../${historias.ImagemURL}" alt="">`;
+    sessaoHistoria.appendChild(historiaItem);
+  });
+}
+
 //Erro, consultar depois
 async function enviarMensagem() {
   const mensagemInput = document.getElementById("mensagemInput");

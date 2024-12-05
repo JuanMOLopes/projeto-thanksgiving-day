@@ -77,8 +77,9 @@ exports.getHistoria = (palavra, callback) => {
     request.on("row", (columns) => {
       result.push({
         ID: columns[0].value, // Captura o valor da primeira coluna (ID)
-        Historia: columns[1].value, // Captura o valor da segunda coluna (Historia)
-        ImagemURL: columns[2].value, // Captura o valor da terceira coluna (ImagemURL)
+        Titulo: columns[1].value, // Captura o valor da segunda coluna (Historia)
+        Historia: columns[2].value, // Captura o valor da segunda coluna (Historia)
+        ImagemURL: columns[3].value, // Captura o valor da terceira coluna (ImagemURL)
       });
     });
 
@@ -94,7 +95,6 @@ exports.getHistoria = (palavra, callback) => {
 
   connection.connect(); // Inicia a conexão com o banco de dados
 };
-
 
 // Função para buscar todos os usuários no banco de dados
 exports.getHistoriaAleatoria = (callback) => {
@@ -124,8 +124,9 @@ exports.getHistoriaAleatoria = (callback) => {
     request.on("row", (columns) => {
       result.push({
         ID: columns[0].value, // Captura o valor da primeira coluna (ID)
-        Historia: columns[1].value, // Captura o valor da segunda coluna (Historia)
-        ImagemURL: columns[2].value, // Captura o valor da terceira coluna (ImagemURL)
+        Titulo: columns[1].value, // Captura o valor da segunda coluna (Historia)
+        Historia: columns[2].value, // Captura o valor da segunda coluna (Historia)
+        ImagemURL: columns[3].value, // Captura o valor da terceira coluna (ImagemURL)
       });
     });
 
