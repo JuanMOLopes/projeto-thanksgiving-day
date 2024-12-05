@@ -233,6 +233,10 @@ footer {
   font-family: "Comfortaa", sans-serif;
   font-size: 1.4rem;
   box-shadow: 0 2px 8px rgba(14, 9, 9, 0.2);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #peru {
@@ -292,8 +296,7 @@ footer {
 
   .parallax {
     height: 40vh;
-    background-position: center;
-    background-size: cover;
+    background-attachment: scroll;
   }
 
   .container1, .container2 {
@@ -324,16 +327,11 @@ footer {
   }
 
   footer {
-    width: 100%;
-    height: auto; 
-    padding: 10px;
-    font-size: 1.2rem;
-    box-shadow: 0 2px 8px rgba(14, 9, 9, 0.2);
+    height: auto;
+    padding: 1rem;
   }
 
   #peru {
     font-size: 6rem;
   }
 }
-
-
