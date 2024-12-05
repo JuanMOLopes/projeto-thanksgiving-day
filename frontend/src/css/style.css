@@ -143,6 +143,19 @@ a:hover {
   width: 60vw;
 }
 
+.container1 img{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.7s ease, box-shadow 0.3s ease;
+}
+.container1 img:hover{
+  transform: scale(1.15);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
 .container2 {
   width: 90vw;
   gap: 20px;
