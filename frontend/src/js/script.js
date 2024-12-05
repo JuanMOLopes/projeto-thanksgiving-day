@@ -171,7 +171,7 @@ async function enviarMensagem() {
   });
 
   if (response.ok) {
-    alert("Usuário adicionado com sucesso!");
+    alert("Mensagem adicionada com sucesso!");
     // Limpa os campos do formulário
     mensagemInput.value = "";
     temaInput.value = "";
