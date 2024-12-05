@@ -151,27 +151,32 @@ async function historiaPorPalavra() {
   });
 }
 
-//Erro, consultar depois
 async function enviarMensagem() {
   const mensagemInput = document.getElementById("mensagemInput");
   const temaInput = document.getElementById("temaInput");
 
-  const mensagem = mensagemInput.value.trim();
-  const tema = temaInput.value.trim();
+  const mensagemDigitada = mensagemInput.value.trim();
+  const temaDigitado = temaInput.value.trim();
+
+  // Validação dos campos
+  if (!mensagemDigitada || !temaDigitado) {
+    alert("Por favor, preencha todos os campos corretamente.");
+    return;
+  }
 
   const response = await fetch(`${apiUrl}/enviarMensagem`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ mensagem, tema }),
+    body: JSON.stringify({ Mensagem: mensagemDigitada, Tema: temaDigitado }),
   });
 
   if (response.ok) {
-    alert("Mensagem adicionada com sucesso!");
+    alert("Usuário adicionado com sucesso!");
+    // Limpa os campos do formulário
     mensagemInput.value = "";
     temaInput.value = "";
-    console.log(`${!ok}`);
   } else {
     const error = await response.json();
-    alert(`Erro ao adicionar mensagem: ${error.message}`);
+    alert(`Erro ao adicionar usuário: ${error.message}`);
   }
 }
